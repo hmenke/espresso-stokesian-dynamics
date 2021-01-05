@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <string>
 #include <type_traits>
+#include <utility>
 
 #if defined(__HIPCC__) or defined(__CUDACC__)
 #define DEVICE_FUNC __host__ __device__

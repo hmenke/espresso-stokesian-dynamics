@@ -7,9 +7,11 @@
 #ifndef SD_DEVICE_MATRIX_HPP
 #define SD_DEVICE_MATRIX_HPP
 
+#include <cmath>
 #include <iomanip>
 #include <limits>
 #include <type_traits>
+#include <utility>
 
 #include "thrust_wrapper.hpp"
 

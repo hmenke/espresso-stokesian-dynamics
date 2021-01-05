@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <cmath>
+#include <limits>
+#include <type_traits>
 
 #include "device_matrix.hpp"
 #include "multi_array.hpp"
@@ -1258,8 +1260,8 @@ struct thermalizer {
 
         // convert to uniform distribution
         uint64_t constexpr const max = std::numeric_limits<uint64_t>::max();
-        double constexpr const fac = 1. / (max + 1.);
-        T rnd = (rint[0] + 0.5) * fac;
+        double constexpr const fac = 1. / (static_cast<double>(max) + 1.);
+        T rnd = (static_cast<double>(rint[0]) + 0.5) * fac;
 #endif
         return std::sqrt(T{2.0}) * sqrt_kT_Dt * std::sqrt(T{12.0}) * (rnd - 0.5);
 
