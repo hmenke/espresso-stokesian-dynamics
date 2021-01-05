@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <cmath>
+#include <limits>
+#include <type_traits>
 
 #include "device_matrix.hpp"
 #include "multi_array.hpp"

@@ -75,6 +75,7 @@ thrust::host_vector<T> operator+(thrust::host_vector<T> const &x,
 #else // Dependencies without THRUST
 #  include <algorithm>
 #  include <cassert>
+#  include <functional>
 #  include <iterator>
 #  include <tuple>
 #  include <vector>
