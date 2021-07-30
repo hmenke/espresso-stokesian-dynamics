@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cmath>
+#include <cstddef>
 #include <limits>
 #include <type_traits>
 
@@ -667,7 +668,7 @@ struct lubrication {
     }
 
     // Computes the pair-wise lubrication interactions between particle pairs
-    DEVICE_FUNC void calc_lub(size_t pair_id, double dr,
+    DEVICE_FUNC void calc_lub(std::size_t pair_id, double dr,
                               multi_array<T, 3> const &d,
                               multi_array<T, 12, 12> &tabc,
                               multi_array<T, 12, 10> &tght,

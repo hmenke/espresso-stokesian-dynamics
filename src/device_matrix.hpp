@@ -8,6 +8,7 @@
 #define SD_DEVICE_MATRIX_HPP
 
 #include <cmath>
+#include <cstddef>
 #include <iomanip>
 #include <limits>
 #include <type_traits>

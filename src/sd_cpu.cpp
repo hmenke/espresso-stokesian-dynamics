@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <vector>
 
 #if THRUST_VERSION < 100908

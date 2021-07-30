@@ -7,6 +7,7 @@
 #define SD_MULTI_ARRAY_HPP
 
 #include <cmath>
+#include <cstddef>
 #include <stdexcept>
 #include <string>
 #include <type_traits>
@@ -61,7 +62,7 @@ struct all<> {
 
 // linearized_index
 
-template <size_t n, size_t... N>
+template <std::size_t n, std::size_t... N>
 struct linearized_index {
     template <typename... Idx>
     DEVICE_FUNC constexpr std::size_t operator()(Idx... idx) const noexcept {
@@ -72,7 +73,7 @@ struct linearized_index {
     }
 };
 
-template <size_t... N>
+template <std::size_t... N>
 struct linearized_index<0, N...> {
     template <typename... Idx>
     DEVICE_FUNC constexpr std::size_t operator()(Idx... idx) const noexcept {
@@ -83,7 +84,7 @@ struct linearized_index<0, N...> {
 
 // check_bounds
 
-template <size_t n, size_t... N>
+template <std::size_t n, std::size_t... N>
 struct check_bounds {
     template <typename... Idx>
     constexpr bool operator()(Idx... idx) const {
@@ -95,7 +96,7 @@ struct check_bounds {
     }
 };
 
-template <size_t... N>
+template <std::size_t... N>
 struct check_bounds<0, N...> {
     template <typename... Idx>
     constexpr bool operator()(Idx... idx) const {

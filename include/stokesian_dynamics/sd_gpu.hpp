@@ -1,6 +1,7 @@
 #ifndef SD_GPU_HPP
 #define SD_GPU_HPP
 
+#include <cstddef>
 #include <vector>
 
 std::vector<double> sd_gpu(std::vector<double> const &x_host,
