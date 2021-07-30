@@ -7,6 +7,7 @@
 #define SD_MULTI_ARRAY_HPP
 
 #include <cmath>
+#include <cstddef>
 #include <stdexcept>
 #include <string>
 #include <type_traits>

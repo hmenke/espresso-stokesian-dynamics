@@ -1,6 +1,7 @@
 #ifndef SD_CPU_HPP
 #define SD_CPU_HPP
 
+#include <cstddef>
 #include <vector>
 
 std::vector<double> sd_cpu(std::vector<double> const &x_host,
