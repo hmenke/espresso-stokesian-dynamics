@@ -16,9 +16,13 @@ if(STOKESIAN_DYNAMICS_GPU)
 endif()
 
 if(STOKESIAN_DYNAMICS)
+  if(POLICY CMP0167)
+    # use BoostConfig.cmake shipped with Boost 1.70+ instead of the one in CMake
+    cmake_policy(SET CMP0167 NEW)
+  endif()
   find_package(BLAS REQUIRED)
   find_package(LAPACK REQUIRED)
-  find_package(Boost 1.65 REQUIRED)
+  find_package(Boost 1.71 REQUIRED)
   add_library(sd_cpu SHARED sd_cpu.cpp)
   add_library(StokesianDynamics::sd_cpu ALIAS sd_cpu)
   target_link_libraries(sd_cpu

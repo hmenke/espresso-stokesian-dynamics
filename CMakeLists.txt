@@ -1,4 +1,7 @@
 # TODO: License header
+cmake_minimum_required(VERSION 3.20.2)
+cmake_policy(VERSION 3.20.2)
+
 project(StokesianDynamics LANGUAGES CXX)
 
 add_library(stokesian_dynamics INTERFACE)
